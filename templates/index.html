@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ServiceWatcher Dashboard</title>
+    <meta http-equiv="refresh" content="10">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Service Status Dashboard</h1>
+    <table>
+        <tr><th>Service</th><th>Status</th><th>Action</th></tr>
+        {% for service, status in statuses.items() %}
+        <tr>
+            <td>{{ service }}</td>
+            <td class="{{ 'running' if status == 'active' else 'stopped' }}">{{ status }}</td>
+            <td>
+                <form action="/restart/{{ service }}" method="get">
+                    <button type="submit">Restart</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

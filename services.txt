@@ -1,0 +1,4 @@
+ssh
+nginx
+mysql
+cron
