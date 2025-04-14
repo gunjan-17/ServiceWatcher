@@ -1,6 +1,6 @@
 # ServiceWatcher 🛠️
 
-**ServiceWatcher** is a real-time Linux service monitoring and control dashboard built with **Flask**, **Bash**, and **systemd**. It allows you to keep track of critical system services like `nginx`, `ssh`, and others via a simple web interface. The dashboard supports auto-refreshing service status, manual restart buttons, and automatic recovery of failed services.
+A lightweight Linux service monitoring and recovery tool with a web dashboard. Built using Bash and Flask to monitor and restart critical services like nginx, ssh, etc.
 
 ---
 
@@ -14,6 +14,66 @@
 
 ---
 
+## 🛠️ Technologies Used
+- Python (Flask)
+- Bash
+- Linux systemd
+- HTML/CSS
+
+---
+
 ## 📁 Project Structure
 
-servicewatcher-dashboard/ ├── app.py # Flask app to serve the dashboard ├── services.txt # List of services to monitor ├── service_watcher.sh # Bash script to auto-restart failed services ├── requirements.txt # Python dependencies ├── templates/ │ └── index.html # HTML template for dashboard UI ├── static/ │ └── style.css # CSS styling for dashboard └── README.md # This file
+servicewatcher-dashboard/
+├── app.py
+├── services.txt
+├── service_watcher.sh
+├── README.md      ← You’ll write this (optional)
+├── requirements.txt
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+
+--
+## 🚀 Getting Started
+
+### Clone this repository:
+```
+git clone https://github.com/YOUR_USERNAME/servicewatcher.git
+cd servicewatcher
+```
+
+### Add your service names to services.txt
+
+### Run the web dashboard
+```
+sudo python3 app.py
+```
+### Open your browser and visit:
+[http://localhost:5000](http://localhost:5000)
+
+### To run the auto-recovery script:
+```
+sudo bash service_watcher.sh
+````
+##🔐 Permissions
+
+Edit your sudoers file to allow passwordless service restarts:
+```
+sudo visudo
+```
+Add:
+```
+your_username ALL=NOPASSWD: /bin/systemctl restart *
+```
+
+## 📸 Demo
+![image](https://github.com/user-attachments/assets/6eb64d14-cd25-4698-9e00-6ab2f5a64760)
+
+
+## ✅ Future Improvements
+- Add service history logging
+- Integrate email/Telegram alerts
+- Add user authentication for dashboard access
+
