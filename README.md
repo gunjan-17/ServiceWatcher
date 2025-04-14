@@ -24,7 +24,7 @@ A lightweight Linux service monitoring and recovery tool with a web dashboard. B
 
 ## 📁 Project Structure
 
-<pre lang="nohighlight"><code>``` project-root/ ├── app.py ├── services.txt ├── requirements.txt ├── templates/ │ └── index.html ├── static/ │ └── style.css └── README.md ```</code></pre>
+<pre lang="nohighlight"><code> servicewatcher-dashboard / ├── app.py ├── services.txt ├── requirements.txt ├── templates/ │ └── index.html ├── static/ │ └── style.css └── README.md </code></pre>
 
 ---
 
