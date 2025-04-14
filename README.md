@@ -24,18 +24,10 @@ A lightweight Linux service monitoring and recovery tool with a web dashboard. B
 
 ## 📁 Project Structure
 
-servicewatcher-dashboard/
-├── app.py
-├── services.txt
-├── service_watcher.sh
-├── README.md      ← You’ll write this (optional)
-├── requirements.txt
-├── templates/
-│   └── index.html
-├── static/
-│   └── style.css
+<pre lang="nohighlight"><code>``` project-root/ ├── app.py ├── services.txt ├── requirements.txt ├── templates/ │ └── index.html ├── static/ │ └── style.css └── README.md ```</code></pre>
 
---
+---
+
 ## 🚀 Getting Started
 
 ### Clone this repository:
@@ -57,7 +49,9 @@ sudo python3 app.py
 ```
 sudo bash service_watcher.sh
 ````
-##🔐 Permissions
+---
+
+## 🔐 Permissions
 
 Edit your sudoers file to allow passwordless service restarts:
 ```
@@ -68,9 +62,12 @@ Add:
 your_username ALL=NOPASSWD: /bin/systemctl restart *
 ```
 
+---
+
 ## 📸 Demo
 ![image](https://github.com/user-attachments/assets/6eb64d14-cd25-4698-9e00-6ab2f5a64760)
 
+---
 
 ## ✅ Future Improvements
 - Add service history logging
